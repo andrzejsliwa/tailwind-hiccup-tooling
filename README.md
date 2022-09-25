@@ -1,3 +1,4 @@
+[![Clojars Project](https://img.shields.io/clojars/v/io.github.andrzejsliwa/tailwind-hiccup-tooling.svg)](https://clojars.org/io.github.andrzejsliwa/tailwind-hiccup-tooling)
 # tailwind-hiccup-tooling
 
 ## Getting started
