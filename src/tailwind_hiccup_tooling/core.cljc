@@ -21,7 +21,7 @@
                             (map #(str (name %)))
                             (s/join "."))
         
-        tw-classes (s/replace joined-classes #"\." " ")]
+        tw-classes (s/replace (s/replace joined-classes #"\." " ") #"!" "/")]
     (merge-with merge (if (s/blank? tw-classes) 
                         {} 
                         {:class (if class_prop
