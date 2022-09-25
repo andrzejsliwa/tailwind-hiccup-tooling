@@ -13,10 +13,10 @@ jobs:
             - v1-dependencies-{{ checksum "deps.edn" }}-{{ checksum "package.json" }}
             - v1-dependencies-
       - run: clojure -Rtest -Stree > /dev/null
-      - run: make node_modules
+      - run: npm install
       - save_cache:
           paths:
             - ~/.m2
             - ~/repo/node_modules
           key: v1-dependencies-{{ checksum "deps.edn" }}-{{ checksum "package.json" }}
-      - run: make test
+      - run: ./bin/test
