@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/clojure:openjdk-11-tools-deps-node-browsers
+      - image: cimg/clojure:1.10.3-node
     working_directory: ~/repo
     environment:
       JVM_OPTS: -Xmx3200m
