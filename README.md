@@ -15,6 +15,9 @@ example][basic-example].
 
 ## API
 
+Inspired by [`rgm/tailwind-hiccup`][tailwind-hiccup], this library provides a function `tw` that gives ability of
+writing multiline hiccup classes (well integrated with `Tailwind CSS`)
+
 ```clojure
 (require '[tailwind-hiccup-tooling.core :refer [tw]]
 
@@ -28,4 +31,4 @@ example][basic-example].
     link-text])
 ```
 
-[tw]: https://tailwindcss.com
+[Tailwind CSS]: https://tailwindcss.com
