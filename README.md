@@ -1,4 +1,4 @@
-[![Clojars Project](https://img.shields.io/clojars/v/io.github.andrzejsliwa/tailwind-hiccup-tooling.svg)](https://clojars.org/io.github.andrzejsliwa/tailwind-hiccup-tooling)
+[![Clojars Project](https://img.shields.io/clojars/v/io.github.andrzejsliwa/tailwind-hiccup-tooling.svg)](https://clojars.org/io.github.andrzejsliwa/tailwind-hiccup-tooling)[![CircleCI](https://dl.circleci.com/status-badge/img/gh/andrzejsliwa/tailwind-hiccup-tooling/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/andrzejsliwa/tailwind-hiccup-tooling/tree/main)
 # tailwind-hiccup-tooling
 
 ## Getting started
