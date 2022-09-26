@@ -20,7 +20,7 @@ Inspired by [tailwind-hiccup](https://github.com/rgm/tailwind-hiccup), this libr
 writing multiline hiccup classes (well integrated with `Tailwind CSS`)
 
 ```clojure
-(require '[tailwind-hiccup-tooling.core :refer [tw]]
+(require '[tailwind-hiccup-tooling.core :refer [tw]])
 
 (defn MyLink
   [link-text]
