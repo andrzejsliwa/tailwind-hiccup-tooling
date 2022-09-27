@@ -8,7 +8,7 @@ Add tailwind-hiccup-tooling as a dependency, eg. for tools.deps projects
 ```clojure
 ;; deps.edn
 {:paths [,,,]
- :deps {,,, io.github.andrzejsliwa/tailwind-hiccup-tooling {:mvn/version "0.1.3"} ,,,}
+ :deps {,,, io.github.andrzejsliwa/tailwind-hiccup-tooling {:mvn/version "0.1.4"} ,,,}
 ```
 
 Setting up the css build can be a little complex. See the [basic usage
