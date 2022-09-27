@@ -27,5 +27,9 @@
 
 (deftest handle-exlamation-mark-as-divide-symbol
   (is (= {:class "group block max-w-xs mx-auto rounded-lg p-6 bg-white shadow-lg space-y-3 w-1/2", :href "#"}
-         (tht/tw :group.block.max-w-xs.mx-auto.rounded-lg.p-6.bg-white 
+         (tht/tw :group.block.max-w-xs.mx-auto.rounded-lg.p-6.bg-white
                  :shadow-lg.space-y-3.w-1!2 {:href "#"}))))
+
+(deftest handle-angle-brackets-as-square-brackets
+  (is (= {:class "group block w-1/2 p-[40px]"}
+         (tht/tw :group.block.w-1!2.p-<40px>))))
