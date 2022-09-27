@@ -46,5 +46,4 @@ And `<>` as `[]`:
 
 ```
 
->>>>>>> 60d8fbf (Added handling of square brackets.)
 [Tailwind CSS]: https://tailwindcss.com
