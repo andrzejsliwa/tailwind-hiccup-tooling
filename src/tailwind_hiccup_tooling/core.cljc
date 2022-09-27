@@ -13,16 +13,16 @@
        (tw :group.block.max-w-xs.mx-auto.rounded-lg.p-6.bg-white
            :shadow-lg.space-y-3.hover:text-red
            {:on-click #(println \"click!\")}) => {:class \"group block max-w-xs mx-auto rounded-lg p-6 bg-white shadow-lg space-y-3 hover:text-red\" :on-click #object[Function]}"
-  [& keyword-classes]
-  (let [has-props  (map? (last keyword-classes))
-        props      (if has-props (last keyword-classes) {})
-        class_prop (:class props)
-        joined-classes (->> (if has-props
-                              (butlast keyword-classes)
-                              keyword-classes)
-                            (map #(str (name %)))
-                            (s/join "."))
-
+  [& kc]
+  (let [keyword-classes (remove nil? kc)
+        has-props       (map? (last keyword-classes))
+        props           (if has-props (last keyword-classes) {})
+        class_prop      (:class props)
+        joined-classes  (->> (if has-props
+                               (butlast keyword-classes)
+                               keyword-classes)
+                             (map #(str (name %)))
+                             (s/join "."))
         tw-classes (replace-several joined-classes #"\." " " #"!" "/" #"<" "[" #">" "]")]
     (merge-with merge (if (s/blank? tw-classes)
                         {}

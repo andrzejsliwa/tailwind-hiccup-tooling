@@ -33,3 +33,7 @@
 (deftest handle-angle-brackets-as-square-brackets
   (is (= {:class "group block w-1/2 p-[40px]"}
          (tht/tw :group.block.w-1!2.p-<40px>))))
+
+(deftest ignore-nils
+  (is (= {:class "group block p-[40px]" :href "#"}
+         (tht/tw :group.block (when false :w-1!2) (when true :p-<40px>) {:href "#"}))))

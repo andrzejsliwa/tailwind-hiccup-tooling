@@ -6,14 +6,19 @@
              lambdaisland/kaocha {:mvn/version "1.70.1086"}
              com.lambdaisland/kaocha-cljs {:mvn/version "1.4.130"}}
             :main-opts ["-m" "kaocha.runner"]}
-           :jar {:extra-deps {seancorfield/depstar {:mvn/version "1.1.133"}}
-                 :exec-fn hf.depstar/jar
-                 :exec-args {:jar "tailwind-hiccup-tooling.jar"}}
-           :install {:extra-deps {slipset/deps-deploy {:mvn/version "0.2.0"}}
-                     :main-opts ["-m" "deps-deploy.deps-deploy" "install" "tailwind-hiccup-tooling.jar"]}
+
+           :build {:deps {io.github.seancorfield/build-clj
+                          {:git/tag "v0.8.3" :git/sha "7ac1f8d"}}
+                   :ns-default build}
+
+           ;; versions to test against:
+           :1.10 {:override-deps {org.clojure/clojure {:mvn/version "1.10.3"}}}
+           :1.11 {:override-deps {org.clojure/clojure {:mvn/version "1.11.1"}}}
+           ;; :master {:override-deps {org.clojure/clojure {:mvn/version "1.12.0-master-SNAPSHOT"}}}
+
            :deploy {:extra-deps {slipset/deps-deploy {:mvn/version "0.2.0"}}
                     :exec-fn deps-deploy.deps-deploy/deploy
                     :exec-args {:installer :remote
                                 :sign-releases? true
                                 :artifact "tailwind-hiccup-tooling.jar"}}}}
-           
+

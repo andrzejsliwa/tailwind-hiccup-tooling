@@ -8,7 +8,7 @@ Add tailwind-hiccup-tooling as a dependency, eg. for tools.deps projects
 ```clojure
 ;; deps.edn
 {:paths [,,,]
- :deps {,,, io.github.andrzejsliwa/tailwind-hiccup-tooling {:mvn/version "0.1.3"} ,,,}
+ :deps {,,, io.github.andrzejsliwa/tailwind-hiccup-tooling {:mvn/version "0.1.5"} ,,,}
 ```
 
 Setting up the css build can be a little complex. See the [basic usage
@@ -36,15 +36,18 @@ Additionally you can use symbol ! as tailwind '/':
 
 ```clojure
   [:a.some-other-class (tw :bg-white.w-1!2)] ;; -> [:a.some-other-class {:class "bg-white w-1/2"}]
-
 ```
 
 And `<>` as `[]`:
 
 ```clojure
   [:a.some-other-class (tw :bg-white.w-<100px>)] ;; -> [:a.some-other-class {:class "bg-white w-[100px]"}]
-
 ```
 
->>>>>>> 60d8fbf (Added handling of square brackets.)
+You can use it also conditionally:
+
+```clojure
+  [:a.some-class (tht/tw :group.block (when false :w-1!2) (when true :p-<40px>) {:href "#"})] ;; -> [:a.some-class {:class "group block p-[40px]", :href "#"}]
+```
+
 [Tailwind CSS]: https://tailwindcss.com
