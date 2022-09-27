@@ -36,14 +36,18 @@ Additionally you can use symbol ! as tailwind '/':
 
 ```clojure
   [:a.some-other-class (tw :bg-white.w-1!2)] ;; -> [:a.some-other-class {:class "bg-white w-1/2"}]
-
 ```
 
 And `<>` as `[]`:
 
 ```clojure
   [:a.some-other-class (tw :bg-white.w-<100px>)] ;; -> [:a.some-other-class {:class "bg-white w-[100px]"}]
+```
 
+You can use it also conditionally:
+
+```clojure
+  [:a.some-class (tht/tw :group.block (when false :w-1!2) (when true :p-<40px>) {:href "#"})] ;; -> [:a.some-class {:class "group block p-[40px]", :href "#"}]
 ```
 
 [Tailwind CSS]: https://tailwindcss.com
