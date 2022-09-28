@@ -36,3 +36,8 @@
 
 (defn print-tag "Print actual tag for current version" [_]
   (println (format "v%s" version)))
+
+(defn clean "Clean the project." [opts]
+  (b/delete {:path "tailwind-hiccup-tooling-VERSION.pom"})
+  (-> opts
+      (bb/clean)))
