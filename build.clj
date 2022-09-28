@@ -17,11 +17,16 @@
           [:1.10])
   opts)
 
+(defn clean "Clean the project." [opts]
+  (b/delete {:path "tailwind-hiccup-tooling-VERSION.pom"})
+  (-> opts
+      (bb/clean)))
+
 (defn ci "Run the CI pipeline of tests (and build the JAR)." [opts]
   (-> opts
       (assoc :lib lib :version (if (:snapshot opts) snapshot version) :src-pom "template/pom.xml")
       (bb/run-tests)
-      (bb/clean)
+      (clean)
       (bb/jar)))
 
 (defn install "Install the JAR locally." [opts]
@@ -34,10 +39,10 @@
       (assoc :lib lib :version (if (:snapshot opts) snapshot version) :src-pom "template/pom.xml")
       (bb/deploy)))
 
-(defn print-tag "Print actual tag for current version" [_]
-  (println (format "v%s" version)))
 
-(defn clean "Clean the project." [opts]
-  (b/delete {:path "tailwind-hiccup-tooling-VERSION.pom"})
-  (-> opts
-      (bb/clean)))
+(defn publish-version "Publish new version." [_]
+  (println "Publishing version:" (format "v%s" version))
+  (b/git-process {:git-args (format "tag -a v%s" version)})
+  (b/git-process {:git-args "push --follow-tags"}))
+
+
