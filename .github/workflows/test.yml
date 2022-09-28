@@ -32,4 +32,4 @@ jobs:
             ~/.cpcache
           key: ${{ runner.os }}-${{ hashFiles('**/deps.edn') }}
       - name: Run All Tests
-        run: clojure -X:test
+        run: clojure -T:build test

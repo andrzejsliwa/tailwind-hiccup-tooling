@@ -1,4 +1,7 @@
-[![Clojars Project](https://img.shields.io/clojars/v/io.github.andrzejsliwa/tailwind-hiccup-tooling.svg)](https://clojars.org/io.github.andrzejsliwa/tailwind-hiccup-tooling)[![CircleCI](https://dl.circleci.com/status-badge/img/gh/andrzejsliwa/tailwind-hiccup-tooling/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/andrzejsliwa/tailwind-hiccup-tooling/tree/main)
+[![Clojars Project](https://img.shields.io/clojars/v/io.github.andrzejsliwa/tailwind-hiccup-tooling.svg)](https://clojars.org/io.github.andrzejsliwa/tailwind-hiccup-tooling)
+
+[![Release Version](https://github.com/andrzejsliwa/tailwind-hiccup-tooling/actions/workflows/test-and-release.yml/badge.svg)](https://github.com/andrzejsliwa/tailwind-hiccup-tooling/actions/workflows/test-and-release.yml)
+[![Develop & Snapshot](https://github.com/andrzejsliwa/tailwind-hiccup-tooling/actions/workflows/test-and-snapshot.yml/badge.svg)](https://github.com/andrzejsliwa/tailwind-hiccup-tooling/actions/workflows/test-and-snapshot.yml)
 # tailwind-hiccup-tooling
 
 ## Getting started
