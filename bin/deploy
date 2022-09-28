@@ -1,3 +1,2 @@
 #!/usr/bin/env sh
-./bin/build
-clj -X:deploy
+./bin/build deploy :snapshot false

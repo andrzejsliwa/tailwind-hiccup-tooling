@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-clojure -X:jar :jar tailwind-hiccup-tooling.jar
+clojure -T:build "$@"

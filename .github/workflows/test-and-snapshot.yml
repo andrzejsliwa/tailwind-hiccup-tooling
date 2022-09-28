@@ -34,10 +34,10 @@ jobs:
         run: npm install
 
       - name: Run All Tests and Snapshot
-        run: clojure -T:build ci :snapshot true
+        run: ./bin/ci-snapshot
 
       - name: Deploy Snapshot
-        run: clojure -T:build deploy :snapshot true
+        run: ./bin/deploy-snapshot
         env:
           CLOJARS_PASSWORD: ${{secrets.CLOJARS_PASSWORD}}
           CLOJARS_USERNAME: ${{secrets.CLOJARS_USERNAME}}
@@ -71,4 +71,4 @@ jobs:
             ~/.cpcache
           key: ${{ runner.os }}-${{ hashFiles('**/deps.edn') }}
       - name: Run Tests
-        run: clojure -T:build test
+        run: ./bin/build test
