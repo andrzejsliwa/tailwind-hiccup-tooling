@@ -34,10 +34,10 @@ jobs:
         run: npm install
 
       - name: Run All Tests and Release
-        run: clojure -T:build ci :snapshot false
+        run: ./bin/ci
 
       - name: Deploy Release
-        run: clojure -T:build deploy :snapshot false
+        run: ./bin/deploy
         env:
           CLOJARS_PASSWORD: ${{secrets.CLOJARS_PASSWORD}}
           CLOJARS_USERNAME: ${{secrets.CLOJARS_USERNAME}}
