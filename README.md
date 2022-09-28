@@ -35,7 +35,7 @@ writing multiline hiccup classes (well integrated with `Tailwind CSS`)
     link-text])
 ```
 
-Additionally you can use symbol ! as tailwind '/':
+Additionally you can use symbol `!` as tailwind `/`:
 
 ```clojure
 [:a.some-other-class (tw :bg-white.w-1!2)]
