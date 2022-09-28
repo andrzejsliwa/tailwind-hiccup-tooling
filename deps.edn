@@ -1,5 +1,7 @@
 {:paths   ["src"]
- :aliases {:test
+ :aliases {:dev
+           {:extra-paths ["test"]}
+           :test
            {:extra-paths ["test"]
             :extra-deps
             {com.fzakaria/slf4j-timbre {:mvn/version "0.3.21"}
