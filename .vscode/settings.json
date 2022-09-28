@@ -1,0 +1,11 @@
+{
+    "files.exclude": {
+        "node_modules/": true,
+        ".lsp/": true,
+        ".cpcache/": true,
+        ".clj-kondo/": true,
+        ".cljs_node_repl/": true,
+        "out/": true,
+        "target/": true
+    }
+}

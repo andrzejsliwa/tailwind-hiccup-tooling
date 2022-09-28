@@ -39,7 +39,6 @@
       (assoc :lib lib :version (if (:snapshot opts) snapshot version) :src-pom "template/pom.xml")
       (bb/deploy)))
 
-
 (defn publish-version "Publish new version." [_]
   (println "Publishing version:" (format "v%s" version))
   (b/git-process {:git-args (format "tag -a v%s" version)})
