@@ -27,6 +27,7 @@
       (assoc :lib lib :version (if (:snapshot opts) snapshot version) :src-pom "template/pom.xml")
       (bb/run-tests)
       (clean)
+      (assoc :src-pom "template/pom.xml")
       (bb/jar)))
 
 (defn install "Install the JAR locally." [opts]
